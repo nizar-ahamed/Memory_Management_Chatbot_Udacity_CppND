@@ -53,6 +53,8 @@ ChatBot::ChatBot(const ChatBot &src) //copy constructor
     _rootNode       = src._rootNode;
     _currentNode    = src._currentNode;
 
+    _chatLogic->SetChatbotHandle(this);
+
     // deep copy owned members
     _image = new wxBitmap();
     *(_image) = *(src._image);
@@ -71,6 +73,8 @@ ChatBot &ChatBot::operator=(const ChatBot &src) //copy assignment operator
     _chatLogic      = src._chatLogic;
     _rootNode       = src._rootNode;
     _currentNode    = src._currentNode;
+
+    _chatLogic->SetChatbotHandle(this);
 
     // deep copy owned members
     _image = new wxBitmap();
