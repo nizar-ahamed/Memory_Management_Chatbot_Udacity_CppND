@@ -96,7 +96,7 @@ ChatBot::ChatBot(ChatBot &&src) //move constructor
     _chatLogic->SetChatbotHandle(this);
 
     // invalidate data handles
-    src._image 			= nullptr;
+    src._image 			= NULL;
     src._chatLogic		= nullptr;
     src._rootNode		= nullptr;
     src._currentNode 	= nullptr;
@@ -120,7 +120,7 @@ ChatBot &ChatBot::operator=(ChatBot &&src) // move assignment operator
     _chatLogic->SetChatbotHandle(this);
 
     // invalidate data handles
-    src._image 			= nullptr;
+    src._image 			= NULL;
     src._chatLogic		= nullptr;
     src._rootNode		= nullptr;
     src._currentNode 	= nullptr;
